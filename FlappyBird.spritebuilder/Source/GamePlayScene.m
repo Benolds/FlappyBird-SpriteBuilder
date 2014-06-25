@@ -3,9 +3,6 @@
 #import "Obstacle.h"
 
 @implementation GamePlayScene
-{
-    NSArray
-}
 
 - (void)initialize
 {
@@ -16,7 +13,6 @@
     [self addObstacle];
     timeSinceLastObstacle = 0.0f;
     
-    [self methodToDebug];
 }
 
 -(void)update:(CCTime)delta
