@@ -13,6 +13,7 @@
     [self addObstacle];
     timeSinceLastObstacle = 0.0f;
     
+    [self methodToDebug];
 }
 
 -(void)update:(CCTime)delta
@@ -32,6 +33,22 @@
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
     [character flap];
+}
+
+- (void)methodToDebug
+{
+    NSArray* numbers = @[@"4", @"2", @"5", @"3", @"1"];
+    NSString* path = @"";
+    
+    int i = 0;
+    
+    do {
+        NSString* num = [numbers objectAtIndex:i];
+        path = [path stringByAppendingString:num];
+        i = [num intValue];
+    } while (i != 0);
+    
+    NSLog(@"The path is %@", path);
 }
 
 @end
